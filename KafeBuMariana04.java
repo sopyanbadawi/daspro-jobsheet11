@@ -13,6 +13,7 @@ public class KafeBuMariana04 {
                 dataPenjualan[i][j] = sc.nextInt();
             }
         }
+        return;
     }
 
     public static void dataPenjualan() {
@@ -31,9 +32,10 @@ public class KafeBuMariana04 {
 
     public static void menuTertinggi() {
         int maxPembelian = 0;
-        String maxMenu = "s";
+        String maxMenu = "";
+        int totalTerjual;
         for (int i = 0; i < menu.length; i++) {
-            int totalTerjual = 0;
+            totalTerjual = 0;
             for (int j = 0; j < 7; j++) {
                 totalTerjual += dataPenjualan[i][j];
             }
@@ -47,8 +49,9 @@ public class KafeBuMariana04 {
 
     public static void avgPenjualan() {
         System.out.println("\nRata-rata Penjualan per Menu:");
+        int totalTerjual;
         for (int i = 0; i < menu.length; i++) {
-            int totalTerjual = 0;
+            totalTerjual = 0;
             for (int j = 0; j < 7; j++) {
                 totalTerjual += dataPenjualan[i][j];
             }
